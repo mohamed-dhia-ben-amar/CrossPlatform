@@ -26,7 +26,7 @@ class Signup extends StatelessWidget {
                 // ignore: prefer_const_constructors
                 decoration: InputDecoration(
                   border: const OutlineInputBorder(),
-                  hintText: 'UserName',
+                  hintText: 'Name....',
                 ),
                 // ignore: prefer_const_constructors
               ),
@@ -38,7 +38,7 @@ class Signup extends StatelessWidget {
                 // ignore: prefer_const_constructors
                 decoration: InputDecoration(
                   border: const OutlineInputBorder(),
-                  hintText: 'Email',
+                  hintText: 'Email....',
                 ),
                 // ignore: prefer_const_constructors
               ),
@@ -50,7 +50,7 @@ class Signup extends StatelessWidget {
                 // ignore: prefer_const_constructors
                 decoration: InputDecoration(
                   border: const OutlineInputBorder(),
-                  hintText: 'Mot de passe',
+                  hintText: 'Password....',
                 ),
                 // ignore: prefer_const_constructors
               ),
@@ -62,7 +62,7 @@ class Signup extends StatelessWidget {
                 // ignore: prefer_const_constructors
                 decoration: InputDecoration(
                   border: const OutlineInputBorder(),
-                  hintText: 'adresse de facturation',
+                  hintText: 'Adresse....',
                 ),
               ),
               const SizedBox(
@@ -74,7 +74,7 @@ class Signup extends StatelessWidget {
                   ElevatedButton.icon(
                     onPressed: (() => {}),
                     label: const Text(
-                      "S'inscrire",
+                      "Sign Up",
                       style: TextStyle(fontSize: 22),
                     ),
                     icon: const Icon(Icons.verified_user),
@@ -85,7 +85,7 @@ class Signup extends StatelessWidget {
                   ElevatedButton.icon(
                     onPressed: (() => {}),
                     label: const Text(
-                      "Annuler",
+                      "Cancel",
                       style: TextStyle(fontSize: 22),
                     ),
                     icon: const Icon(Icons.cancel),

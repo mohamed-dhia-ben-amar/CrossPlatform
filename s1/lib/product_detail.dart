@@ -38,7 +38,7 @@ class ProductDetails extends StatelessWidget {
           child: ElevatedButton.icon(
             onPressed: (() => {}),
             label: const Text(
-              "Acheter",
+              "Buy",
               style: TextStyle(fontSize: 22),
             ),
             icon: const Icon(Icons.account_balance_wallet),
