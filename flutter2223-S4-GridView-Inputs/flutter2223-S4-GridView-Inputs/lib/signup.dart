@@ -27,7 +27,9 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: const Text("Store"),
+      ),
       body: Form(
         key: formKey,
         child: ListView(
@@ -74,6 +76,9 @@ class _SignUpState extends State<SignUp> {
             Container(
               margin: const EdgeInsets.fromLTRB(10, 0, 10, 10),
               child: TextFormField(
+                obscureText: true,
+                enableSuggestions: false,
+                autocorrect: false,
                 onSaved: (newValue) {
                   password = newValue!;
                 },
