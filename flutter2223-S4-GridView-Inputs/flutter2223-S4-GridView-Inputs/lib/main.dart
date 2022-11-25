@@ -3,6 +3,7 @@ import 'package:myapp/SignIn.dart';
 import 'package:myapp/details_screen.dart';
 import 'package:myapp/home_screen.dart';
 import 'package:myapp/new_home.dart';
+import 'package:myapp/panierscreen.dart';
 import 'package:myapp/reset_password.dart';
 import 'package:myapp/signup.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.red,
         ),
-        home: ResetPassword(image: 'Assets/re8.jpg',));
+        home: Panier());
   }
 }
 

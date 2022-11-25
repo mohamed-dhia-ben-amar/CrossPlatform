@@ -16,9 +16,15 @@ class Cell extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            Padding(
+              padding: const EdgeInsets.only(right:30.0),
+              child: IconButton(
+                iconSize: 46, icon: Icon(Icons.restore_from_trash), onPressed: () {  },
+              ),
+            ),
             Image.asset(
               "Assets/${mGame.image}",
-              width: 240,
+              width: 180,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 5.0),
