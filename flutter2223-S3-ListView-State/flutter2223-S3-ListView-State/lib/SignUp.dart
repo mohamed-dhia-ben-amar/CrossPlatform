@@ -10,95 +10,104 @@ class Signup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-        children:[ Column(
-          children: [
-            Container(
-              margin: const EdgeInsets.fromLTRB(10, 10, 10, 30),
-              child: Image.asset(image),
+    late String username;
+    late String mail;
+    late String pwd;
+    late String adresse;
+    return Form(child:
+      ListView(children: [
+      Column(
+        children: [
+          Container(
+            margin: const EdgeInsets.fromLTRB(10, 10, 10, 30),
+            child: Image.asset(image),
+          ),
+          Container(
+            margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+            child: Column(
+              // ignore: prefer_const_literals_to_create_immutables
+              children: [
+                // ignore: prefer_const_constructors
+                TextFormField(
+                  onSaved: (newValue) => username = newValue!,
+                  // ignore: prefer_const_constructors
+                  decoration: InputDecoration(
+                    border: const OutlineInputBorder(),
+                    labelText: 'UserName',
+                  ),
+                  // ignore: prefer_const_constructors
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                // ignore: prefer_const_constructors
+                TextFormField(
+                  onSaved: (newValue) => mail = newValue!,
+                  // ignore: prefer_const_constructors
+                  decoration: InputDecoration(
+                    border: const OutlineInputBorder(),
+                    labelText: 'Email',
+                  ),
+                  // ignore: prefer_const_constructors
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                // ignore: prefer_const_constructors
+                TextFormField(
+                  onSaved: (newValue) => pwd = newValue!,
+                  // ignore: prefer_const_constructors
+                  decoration: InputDecoration(
+                    border: const OutlineInputBorder(),
+                    labelText: 'Mot de passe',
+                  ),
+                  // ignore: prefer_const_constructors
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                // ignore: prefer_const_constructors
+                TextFormField(
+                  onSaved: (newValue) => adresse = newValue!,
+                  maxLines: 4,
+                  // ignore: prefer_const_constructors
+                  decoration: InputDecoration(
+                    border: const OutlineInputBorder(),
+                    labelText: 'adresse de facturation',
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton.icon(
+                      onPressed: (() => {}),
+                      label: const Text(
+                        "S'inscrire",
+                        style: TextStyle(fontSize: 22),
+                      ),
+                      icon: const Icon(Icons.verified_user),
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    ElevatedButton.icon(
+                      onPressed: (() => {}),
+                      label: const Text(
+                        "Annuler",
+                        style: TextStyle(fontSize: 22),
+                      ),
+                      icon: const Icon(Icons.cancel),
+                    ),
+                  ],
+                ),
+              ],
             ),
-            Container(
-              margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),
-              child: Column(
-                // ignore: prefer_const_literals_to_create_immutables
-                children: [
-                  // ignore: prefer_const_constructors
-                  TextField(
-                    // ignore: prefer_const_constructors
-                    decoration: InputDecoration(
-                      border: const OutlineInputBorder(),
-                      labelText: 'UserName',
-                    ),
-                    // ignore: prefer_const_constructors
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  // ignore: prefer_const_constructors
-                  TextField(
-                    // ignore: prefer_const_constructors
-                    decoration: InputDecoration(
-                      border: const OutlineInputBorder(),
-                      labelText: 'Email',
-                    ),
-                    // ignore: prefer_const_constructors
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  // ignore: prefer_const_constructors
-                  TextField(
-                    // ignore: prefer_const_constructors
-                    decoration: InputDecoration(
-                      border: const OutlineInputBorder(),
-                      labelText: 'Mot de passe',
-                    ),
-                    // ignore: prefer_const_constructors
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  // ignore: prefer_const_constructors
-                  TextField(
-                    // ignore: prefer_const_constructors
-                    decoration: InputDecoration(
-                      border: const OutlineInputBorder(),
-                      labelText: 'adresse de facturation',
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      ElevatedButton.icon(
-                        onPressed: (() => {}),
-                        label: const Text(
-                          "S'inscrire",
-                          style: TextStyle(fontSize: 22),
-                        ),
-                        icon: const Icon(Icons.verified_user),
-                      ),
-                      const SizedBox(
-                        width: 20,
-                      ),
-                      ElevatedButton.icon(
-                        onPressed: (() => {}),
-                        label: const Text(
-                          "Annuler",
-                          style: TextStyle(fontSize: 22),
-                        ),
-                        icon: const Icon(Icons.cancel),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            )
-          ],
-        ),
-        ]
-    );
+          )
+        ],
+      ),
+    ]));
   }
 }

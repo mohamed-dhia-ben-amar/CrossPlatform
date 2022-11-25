@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
     ),
     body : //const Signup(image: 'Assets/dmc5.jpg')
            //bilblo()
-    SignIn(image: 'Assets/dmc5.jpg',)
+    Signup(image: 'Assets/dmc5.jpg',)
      ));
   }
 }
